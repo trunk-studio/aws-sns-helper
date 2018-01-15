@@ -1,0 +1,21 @@
+{
+  "name": "aws-sns-helper",
+  "version": "0.1.7",
+  "main": "index.js",
+  "description": "",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "config": "^1.28.1",
+    "jest-cli": "^21.2.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.157.0",
+    "debug": "^3.1.0"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "test": "jest __tests__"
+  }
+}
