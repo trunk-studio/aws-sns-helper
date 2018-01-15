@@ -105,10 +105,10 @@ class SNSHelper {
                     'data': { 'message': message }
                 }   
             }
-        }
-        data.data = {
-            ...data.data,
-            ...messageAttributes
+            data.data = {
+                ...data.data,
+                ...messageAttributes
+            }
         }
 
         /*
