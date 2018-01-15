@@ -84,11 +84,9 @@ class SNSHelper {
         if(platform.startsWith("APNS")){
             data = {
                 aps: {
-                    alert: message,
-                    sound: 'default',
-                    badge: notifyCount
+                    alert: message
                 },
-                notification: notification
+                ...messageAttributes
             }
         } else if(platform.startsWith("GCM")){
             data = {}
