@@ -86,6 +86,8 @@ test.only('fcm sending message', async () => {
   
   let snsHelper = new SNSHelper(constructorParams);
   let props = {
+    title: 'title',
+    // devicePlatform: 'ios',
     platform: "GCM",
     deviceToken: config.test.ANDROID_DEVICE_TOKEN,
     message: "test message",

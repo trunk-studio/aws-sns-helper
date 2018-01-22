@@ -1,6 +1,6 @@
 {
   "name": "aws-sns-helper",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "index.js",
   "description": "",
   "devDependencies": {

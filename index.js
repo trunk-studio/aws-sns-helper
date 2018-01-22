@@ -67,7 +67,7 @@ class SNSHelper {
 
   async pushNotification (props) {
     console.log("=== module pushNotification ===")
-    let {platform, devicePlatform, deviceToken, message, notification, notifyCount, messageAttributes} = props;
+    let {platform, devicePlatform, deviceToken, message, notification, notifyCount, messageAttributes, title} = props;
     let result;
     let endpoint;
     let data;
@@ -94,13 +94,20 @@ class SNSHelper {
 
             if(devicePlatform == "ios"){
                 data = {
-                    'notification': { 'text': message },
+                    // 'title': '123123',
+                    'notification': {
+                        'text': message,
+                        ...title ? { title } : {},
+                    },
                     'data': {}
                 }
                 
             }else if(devicePlatform == "android") {
                 data = {
-                    'data': { 'message': message }
+                    'data': {
+                        'message': message,
+                        ...title ? { title } : {},
+                    }
                 }   
             }
             data.data = {
