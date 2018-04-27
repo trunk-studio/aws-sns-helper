@@ -84,7 +84,10 @@ class SNSHelper {
         if(platform.startsWith("APNS")){
             data = {
                 aps: {
-                    alert: message
+                    alert: {
+                        "body": message,
+                        ...title ? { title } : {},
+                    }
                 },
                 ...messageAttributes
             }
