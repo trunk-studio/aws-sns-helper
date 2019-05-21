@@ -96,11 +96,11 @@ test.only('fcm sending message', async () => {
       'hello': {
         DataType: 'String', /* required */
         StringValue: 'hi'
-      },      
+      },
     }
   }
 
-  let result = await snsHelper.pushNotification(props);  
+  let result = await snsHelper.pushNotification(props);
   console.log("result", JSON.stringify(result, null, 2));
 
   // result = {

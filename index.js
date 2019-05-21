@@ -106,10 +106,16 @@ class SNSHelper {
 
                 } else if (devicePlatform == "android") {
                     data = {
-                        'data': {
-                            'message': message,
+                        // 舊版 ＧCM 推播
+                        // 'data': {
+                        //     'message': message,
+                        //     ...title ? { title } : {},
+                        // }
+                        'notification': {
+                            'text': message,
                             ...title ? { title } : {},
-                        }
+                        },
+                        'data': {}
                     }
                 }
                 data.data = {
