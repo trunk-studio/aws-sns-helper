@@ -115,7 +115,10 @@ class SNSHelper {
                             'text': message,
                             ...title ? { title } : {},
                         },
-                        'data': {}
+                        'data': {
+                            'message': message,
+                            ...title ? { title } : {},
+                        }
                     }
                 }
                 data.data = {
